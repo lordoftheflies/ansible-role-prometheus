@@ -1,0 +1,5 @@
+---
+# roles/prometheus/vars/debian.yml
+
+# Debian specific vars
+prometheus_package_extension: 'deb'

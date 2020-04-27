@@ -1,0 +1,4 @@
+---
+# roles/prometheus/vars/debian.yml
+
+prometheus_package_extension: 'rpm'

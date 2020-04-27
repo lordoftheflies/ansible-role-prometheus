@@ -1,0 +1,17 @@
+---
+# file: project/prometheus.yml
+
+- hosts: prometheus
+  become: false
+  gather_facts: true
+  pre_tasks:
+
+    - set_fact: fact_role_name="{{ lookup('env','ANSIBLE_ROLE_NAME') }}"
+    - debug: var=fact_role_name
+
+    - set_fact: fact_role_path="{{ lookup('pipe','pwd') }}/roles/prometheus"
+    - debug: var=fact_role_path
+
+  roles:
+
+    - prometheus
